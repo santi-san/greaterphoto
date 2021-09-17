@@ -3,6 +3,8 @@
 :root {
   --color-primary: rgba(255, 255, 255, 0.55);
   --color-secondary: rgba(255, 255, 255, 0.75);
+  --color-accent: #d09d2d;
+  --bg-primary: #222222;
 }
 
 /********* ESTILOS GENERALES *********/
@@ -50,7 +52,7 @@ html {
       to bottom,
       rgba(0, 0, 0, 0) 0%,
       rgba(0, 0, 0, 0) 60%,
-      #070702 100%
+      var(--bg-primary) 100%
     ),
     url("../img/naejangsan3.jpeg");
   background-position-x: 0%, 0%;
@@ -71,7 +73,13 @@ html {
   color: var(--color-secondary);
   font-weight: 400;
 }
-
+.logo-transform {
+  transition-property: transform;
+  transition-duration: 0.8s;
+}
+.logo-transform:hover {
+  transform: rotate(180deg) scale(0.8);
+}
 .btn-login {
   color: var(--color-primary);
   display: inline-block;
@@ -113,7 +121,7 @@ html {
   margin-left: 2rem;
 }
 /*******Stadistics**********/
-.stats {
+.stats-card {
   display: flex;
   flex-direction: column;
   min-width: 0;
@@ -129,11 +137,57 @@ html {
   text-align: center;
   font-family: "Nunito Sans", sans-serif;
 }
-.stats .card-title{
+.stats-card .card-title{
   font-weight: 600;
 }
-.stats .card-text {
+.stats-card .card-text {
   color: var(--color-secondary);
   font-size: .8rem;
   font-weight: 600;
 }
+/*******MENU HERO**********/
+.container-hero {
+  bottom: 5%;
+}
+.menu-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  color: white;
+}
+.card-hero {
+  background: transparent;
+  color: rgb(240, 240, 240);
+  cursor: pointer;
+  /* background-image: linear-gradient( var(--color-secondary),var(--color-secondary));
+  background-size: 100% 3%; */
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 3px solid gray;
+  transition: border-bottom 400ms ease;
+}
+.card-hero:hover, .card-hero:active{
+  /* background-image: linear-gradient(90deg, yellow,yellow);
+  background-size: 100% 100%; */
+  border-bottom: 3px solid var(--color-accent);
+}
+.card-hero:hover span, .card-hero:active span {
+  border-color: var(--color-accent);
+}
+.card-hero span {
+  border: 1px solid var(--color-secondary);
+  border-radius: 50rem;
+  padding: .5rem;
+  transition: border-color 300ms ease;
+}
+/********SECTION TOP PHOTO CLASSES***********/
