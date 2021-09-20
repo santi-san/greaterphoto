@@ -30,8 +30,18 @@ body {
 .pt-6 {
   padding-top: 5rem;
 }
+.py-6 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
 body {
   font-family: "Montserrat", sans-serif;
+}
+.font-sans {
+  font-family: "Nunito Sans", sans-serif;
+}
+.font-serif {
+  font-family: "Merriweather", serif;
 }
 /********* SCROLLBAR *************/
 html {
@@ -48,13 +58,7 @@ html {
 /***********Nav***********/
 .header-container {
   height: 100% !important;
-  background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0) 60%,
-      var(--bg-primary) 100%
-    ),
-    url("../img/naejangsan3.jpeg");
+  background: url("../img/naejangsan3.jpeg");
   background-position-x: 0%, 0%;
   background-position-y: 0%, 0%;
   background-attachment: scroll, scroll;
@@ -65,20 +69,34 @@ html {
   background-blend-mode: multiply;
   color: #fff;
 }
+.header-container::after {
+  content: '';
+  background: linear-gradient( to bottom, rgba(0, 0, 0, 0) 60%, #191c28 100% );
+  height: 50%;
+  top: 50%;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
 .border-b-opacity {
   border-bottom: 1px solid #9c80ce66;
 }
-
 .navbar-brand > span {
   color: var(--color-secondary);
   font-weight: 400;
 }
-.logo-transform {
-  transition-property: transform;
-  transition-duration: 0.8s;
+.navbar-brand:hover .logo-transform {
+  transform:rotate(180deg);
 }
-.logo-transform:hover {
-  transform: rotate(180deg) scale(0.8);
+.navbar-brand .logo-transform {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  background: transparent url('../img/logo/shutter.png') no-repeat 0 0 ;
+  transition-duration: 0.8s;
+  transition-property: transform;
+  background-size: cover;
 }
 .btn-login {
   color: var(--color-primary);
@@ -104,21 +122,15 @@ html {
 .hero {
   height: calc(100% - 165px);
 }
-.photo-artist {
-  font-family: "Nunito Sans", sans-serif;
-}
-.photo-title {
-  font-family: "Merriweather", serif;
-}
-.photo-artist::before,
-.photo-artist::after {
+.artist-name::before,
+.artist-name::after {
   content: "-";
 }
-.photo-artist::before {
-  margin-right: 2rem;
+.artist-name::before {
+  margin-right: 1rem;
 }
-.photo-artist::after {
-  margin-left: 2rem;
+.artist-name::after {
+  margin-left: 1rem;
 }
 /*******Stadistics**********/
 .stats-card {
@@ -132,8 +144,6 @@ html {
   width: 10rem;
   padding: 1rem 0;
   margin: 0 .5rem;
-  -webkit-box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
-  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.5);
   text-align: center;
   font-family: "Nunito Sans", sans-serif;
 }
@@ -165,8 +175,6 @@ html {
   background: transparent;
   color: rgb(240, 240, 240);
   cursor: pointer;
-  /* background-image: linear-gradient( var(--color-secondary),var(--color-secondary));
-  background-size: 100% 3%; */
   background-repeat: no-repeat;
   background-position: left bottom;
   border-radius: 0;
@@ -191,3 +199,43 @@ html {
   transition: border-color 300ms ease;
 }
 /********SECTION TOP PHOTO CLASSES***********/
+.bg-gray-dark {
+  background: #191c28;
+  color: #c9d6ea;
+}
+.bg-gray-dark h5{
+  color: var(--color-secondary);
+}
+.bg-gray-dark h1{
+  color: #fafafa;
+}
+.img-fluid-new {
+  height: 100%;
+  object-fit: cover;
+}
+.card-classes {
+  display: flex;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  border-radius: 0.25rem;
+  width: 18rem;
+  margin: 0 .5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+  height: 28rem;
+  padding-bottom: 2rem;
+  overflow: hidden;
+}
+.card-classes > img {
+  object-fit: cover;
+}
+.card-classes > div {
+  left: 0;
+right: 0;
+bottom: 0;
+background: linear-gradient( to top, #191c28 0%, #131620e6 50%, #13162014 100% );
+height: 100px;
+padding-top: 2rem;
+}
