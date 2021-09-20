@@ -199,14 +199,17 @@ html {
   transition: border-color 300ms ease;
 }
 /********SECTION TOP PHOTO CLASSES***********/
-.bg-gray-dark {
+.section-dark {
   background: #191c28;
   color: #c9d6ea;
 }
-.bg-gray-dark h5{
+.section-dark .container {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.082);
+}
+.section-dark h5{
   color: var(--color-secondary);
 }
-.bg-gray-dark h1{
+.section-dark h1{
   color: #fafafa;
 }
 .img-fluid-new {
@@ -238,4 +241,59 @@ bottom: 0;
 background: linear-gradient( to top, #191c28 0%, #131620e6 50%, #13162014 100% );
 height: 100px;
 padding-top: 2rem;
+}
+/********SECTION EDITORS***********/
+.card-editor {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  border-radius: 0.25rem;
+  width: 100%;
+  margin: 0 .5rem;
+  margin-bottom: 0px;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+  height: auto;
+  padding-bottom: 2rem;
+  overflow: hidden;
+}
+
+.card-editor > div > div {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient( to top, #191c28 0%, #131620e6 50%, #13162014 100% );
+  /* padding-top: 2rem; */
+} 
+.profile-img {
+  border-radius: 50%;
+  border: 2px solid white;
+  height: 4.5rem;
+  width: 4.5rem;
+}
+
+.btn-tag {
+  color: var(--color-primary);
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  margin: .25rem .125rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  padding: .2rem 1rem;
+  border-radius: 40rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.btn-tag:hover {
+  color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
 }
