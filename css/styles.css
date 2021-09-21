@@ -424,7 +424,9 @@ padding-top: 2rem;
   color: var(--color-white);
 }
 /*********PRE FOOTER***********/
-.pre-footer {
+.pre-footer .container {
+  padding: 5rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.082);
+  border-top: 1px solid rgba(255, 255, 255, 0.082);
 }
 
