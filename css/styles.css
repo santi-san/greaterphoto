@@ -4,7 +4,7 @@
   --color-secondary: rgba(255, 255, 255, 0.75);
   --color-white: #fafafa;
   --color-accent: #d09d2d;
-  --bg-primary: #222222;
+  --bg-primary: #191c28;
 }
 
 /********* ESTILOS GENERALES *********/
@@ -23,9 +23,13 @@ html,
 body {
   height: 100%;
   margin: 0;
+  background: var(--bg-primary);
 }
 :focus {
   outline: none;
+}
+.pb-6 {
+  padding-bottom: 5rem;
 }
 .pt-6 {
   padding-top: 5rem;
@@ -359,7 +363,6 @@ padding-top: 2rem;
 .card-students {
   color: var(--color-secondary);
   padding: 1rem 2rem;
-  border-bottom: 1px solid #ffffff0f;
 }
 .card-students h5 {
   color: var(--color-white);
@@ -370,3 +373,58 @@ padding-top: 2rem;
   margin: 0 auto;
   padding-bottom: 2rem;
 }
+/**********STATS*************/
+.section-stats {
+  height: 80% !important;
+  background:  url("../img/bg-x.jpg");
+  background-size: cover;
+  background-color: #16175ec4;
+  background-blend-mode: multiply;
+}
+.section-stats h5{
+  color: var(--color-primary);
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.section-stats h1{
+  color: var(--color-white);
+  font-weight: 600;
+}
+.section-stats p{
+  color: var(--color-primary);
+  font-weight: 600;
+}
+.section-stats a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+.section-stats a {
+  font-weight: 600;
+  position: relative;
+  padding-left: 3rem;
+}
+.section-stats a:hover {
+  color: #ffea99;
+}
+.section-stats a::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 0;
+  width: 40px;
+  border-bottom: 2px solid var(--color-accent);
+}
+.section-stats a:hover::before {
+  border-bottom-color: #ffea99;
+}
+.stats-info {
+  bottom: 3%;
+  left: 0;
+  right: 0;
+  color: var(--color-white);
+}
+/*********PRE FOOTER***********/
+.pre-footer {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.082);
+}
+
