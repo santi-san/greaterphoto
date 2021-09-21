@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Nunito+Sans&display=swap");
-
 :root {
   --color-primary: rgba(255, 255, 255, 0.55);
   --color-secondary: rgba(255, 255, 255, 0.75);
@@ -42,6 +41,28 @@ body {
 }
 .font-serif {
   font-family: "Merriweather", serif;
+}
+.btn-tag {
+  color: var(--color-primary);
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  margin: .25rem .125rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  padding: .2rem 1rem;
+  border-radius: 40rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.btn-tag:hover {
+  color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
 }
 /********* SCROLLBAR *************/
 html {
@@ -206,7 +227,8 @@ html {
 .section-dark .container {
   border-bottom: 1px solid rgba(255, 255, 255, 0.082);
 }
-.section-dark h5{
+.section-dark h6{
+  letter-spacing: 4px;
   color: var(--color-secondary);
 }
 .section-dark h1{
@@ -222,7 +244,7 @@ html {
   word-wrap: break-word;
   background-clip: border-box;
   border-radius: 0.25rem;
-  width: 18rem;
+  max-width: 18rem;
   margin: 0 .5rem;
   margin-bottom: 2rem;
   text-align: center;
@@ -250,7 +272,6 @@ padding-top: 2rem;
   word-wrap: break-word;
   background-clip: border-box;
   border-radius: 0.25rem;
-  width: 100%;
   margin: 0 .5rem;
   margin-bottom: 0px;
   margin-bottom: 2rem;
@@ -274,26 +295,32 @@ padding-top: 2rem;
   height: 4.5rem;
   width: 4.5rem;
 }
-
-.btn-tag {
-  color: var(--color-primary);
-  display: inline-block;
+/**********LATEST WORKSHOPS********/
+.card-latest {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  border-radius: 0.25rem;
+  margin: 0 .5rem;
+      margin-bottom: 0px;
+  margin-bottom: 2rem;
   text-align: center;
-  text-decoration: none;
-  vertical-align: middle;
-  cursor: pointer;
-  margin: .25rem .125rem;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  background-color: transparent;
-  border: 1px solid var(--color-primary);
-  padding: .2rem 1rem;
-  border-radius: 40rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  font-family: "Nunito Sans", sans-serif;
+  height: auto;
+  padding-bottom: 2rem;
+  overflow: hidden;
 }
-.btn-tag:hover {
-  color: var(--color-secondary);
-  border: 1px solid var(--color-secondary);
+.card-latest-img {
+  height: 28rem;
+}
+.card-latest-img img {
+  object-fit: cover;
+}
+.card-latest-content {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient( to top, #191c28 0%, #131620e6 50%, #13162000 100% );
 }
