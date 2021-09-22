@@ -427,6 +427,31 @@ padding-top: 2rem;
 .pre-footer .container {
   padding: 5rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.082);
-  border-top: 1px solid rgba(255, 255, 255, 0.082);
 }
-
+.pre-footer a:hover {
+  color: var(--color-accent);
+}
+/**********FOOTER**************/
+footer {
+  color: var(--color-secondary);
+}
+footer a{
+  color: var(--color-white);
+}
+footer a:hover{
+  color: var(--color-accent);
+}
+footer i {
+  padding-right: .8rem;
+}
+.styled-link {
+  background-image: linear-gradient(90deg, var(--color-accent), var(--color-accent));
+  background-size: 0% 3px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 300ms ease;
+  padding-bottom: 4px;
+}
+.styled-link:hover {
+  background-size: 100% 3px;
+}
