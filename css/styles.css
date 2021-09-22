@@ -423,6 +423,9 @@ padding-top: 2rem;
   right: 0;
   color: var(--color-white);
 }
+.stats-info h3 {
+  font-weight: 600;
+}
 /*********PRE FOOTER***********/
 .pre-footer .container {
   padding: 5rem 0;
