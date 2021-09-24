@@ -101,6 +101,7 @@ html {
   background-color: violet;
   background-blend-mode: multiply;
   color: var(--color-white);
+  background-attachment: fixed;
 }
 .header-container::after {
   content: '';
@@ -114,6 +115,9 @@ html {
 }
 .border-b-opacity {
   border-bottom: 1px solid #9c80ce66;
+}
+.navbar-dark .navbar-brand:focus, .navbar-dark .navbar-brand:hover {
+  color: var(--color-accent);
 }
 .navbar-brand > span {
   color: var(--color-secondary);
@@ -219,6 +223,7 @@ html {
   border-top: none;
   border-bottom: 3px solid gray;
   transition: border-bottom 400ms ease;
+  padding: 1rem 0;
 }
 .card-hero:hover, .card-hero:active{
   /* background-image: linear-gradient(90deg, yellow,yellow);
@@ -233,6 +238,7 @@ html {
   border-radius: 50rem;
   padding: .5rem;
   transition: border-color 300ms ease;
+  word-wrap: normal;
 }
 /********SECTION TOP PHOTO CLASSES***********/
 .section-dark {
@@ -270,6 +276,13 @@ html {
 }
 .card-classes > img {
   object-fit: cover;
+  opacity: 0.7;
+  transition: opacity 0.35s, transform 0.35s;
+  transform: translate3d(-40px,0,0);
+  max-width: none;
+}
+.card-classes > img:hover {
+  transform: translate3d(0,0,0);
 }
 .card-classes > div {
   left: 0;
@@ -332,6 +345,10 @@ padding-top: 2rem;
 }
 .card-latest-img img {
   object-fit: cover;
+  transition: filter .5s;
+}
+.card-latest-img img:hover {
+  filter: sepia(100%)
 }
 .card-latest-content {
   bottom: 0;
@@ -366,6 +383,10 @@ padding-top: 2rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   background: radial-gradient(#262a3c, #191c28);
   border-radius: 8px;
+  transition: transform .3s ease-out;
+}
+.card-students:hover {
+  transform: translate(0, -10px);
 }
 .card-students h5 {
   color: var(--color-white);
@@ -383,6 +404,7 @@ padding-top: 2rem;
   background-size: cover;
   background-color: #16175ec4;
   background-blend-mode: multiply;
+  background-attachment: fixed;
 }
 .section-stats h5{
   color: var(--color-primary);
