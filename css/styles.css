@@ -277,12 +277,13 @@ html {
 .card-classes > img {
   object-fit: cover;
   opacity: 0.7;
-  transition: opacity 0.35s, transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s, filter 0.55s;
   transform: translate3d(-40px,0,0);
   max-width: none;
 }
 .card-classes > img:hover {
   transform: translate3d(0,0,0);
+  filter: grayscale(100%);
 }
 .card-classes > div {
   left: 0;
